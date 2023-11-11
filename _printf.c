@@ -7,13 +7,13 @@
 int _printf(const char * const format, ...)
 {
 	convert p[] = {
-		{"%s", print_s}, {"%c", print_c},
-		{"%%", print_37},
-		{"%i", print_i}, {"%d", print_d}, {"%r", print_revs},
+		{"%s", print_string}, {"%c", print_c},
+		{"%%", print_%},
+		{"%i", print_i}, {"%d", print_d}, {"%r", print_rev},
 		{"%R", print_rot13}, {"%b", print_bin},
 		{"%u", print_unsigned},
 		{"%o", print_oct}, {"%x", print_hex}, {"%X", print_HEX},
-		{"%S", print_exc_string}, {"%p", print_pointer}
+		{"%S", print_exstring}, {"%p", print_pointer}
 	};
 
 	va_list args;
