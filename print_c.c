@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- *print_c - prints a character.
- *@val: arguments.
- *Return: integer.
+ * print_c - prints a character.
+ * @val: arguments.
+ * Return: integer.
  */
 int print_c(va_list val)
 {

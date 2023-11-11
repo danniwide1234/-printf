@@ -1,10 +1,11 @@
 #include "main.h"
+
 /**
- * print_HEX2 - prints an hexgecimal number.
+ * print_HEX_extra - prints an hexgecimal number.
  * @num: number to print.
  * Return: counter.
  */
-int print_HEX2(unsigned int num)
+int print_HEX_extra(unsigned int num)
 {
 	int i;
 	int *array;

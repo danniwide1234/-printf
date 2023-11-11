@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *print_rot13 - convert to rot13
- *@args: printf arguments
- *Return: counter
+ * print_rot13 - convert to rot13
+ * @args: printf arguments
+ * Return: counter
  *
  */
 int print_rot13(va_list args)

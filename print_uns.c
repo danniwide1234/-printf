@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- *print_unsigned - prints integer
- *@args: argument to print
- *Return: integer
+ * print_unsigned - prints integer
+ * @args: argument to print
+ * Return: integer
  */
 int print_unsigned(va_list args)
 {
@@ -39,6 +39,6 @@ int print_unsigned(va_list args)
 		}
 	}
 	_putchar(last + '0');
+
 	return (i);
 }
-

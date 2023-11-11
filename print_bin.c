@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- *print_bin - prints binary number.
- *@val: parameter.
- *Return: integer
+ * print_bin - prints binary number.
+ * @val: parameter.
+ * Return: integer
  */
 int print_bin(va_list val)
 {
@@ -16,9 +17,7 @@ int print_bin(va_list val)
 	{
 		p = ((a << (31 - i)) & num);
 		if (p >> (31 - i))
-		{
 			flag = 1;
-		}
 		if (flag)
 		{
 			b = p >> (31 - i);

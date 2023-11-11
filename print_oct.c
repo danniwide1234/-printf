@@ -1,8 +1,9 @@
 #include "main.h"
+
 /**
- *print_oct - prints an octal number.
- *@val: arguments.
- *Return: counter.
+ * print_oct - prints an octal number.
+ * @val: arguments.
+ * Return: counter.
  */
 int print_oct(va_list val)
 {
@@ -32,4 +33,3 @@ int print_oct(va_list val)
 	free(array);
 	return (counter);
 }
-

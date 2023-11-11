@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- *print_exstring - print exclusuives string.
- *@val: parameter.
- *Return: integer.
+ * print_exstring - print exclusuives string.
+ * @val: parameter.
+ * Return: integer.
  */
+
 int print_exstring(va_list val)
 {
 	char *s;
