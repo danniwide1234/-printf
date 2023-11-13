@@ -59,7 +59,7 @@ int prt_fnc(char *s, va_list ap, params_t *params)
  *
  *Return: if flag was valid
  */
-int get_flag(char *s, params_t *params)
+int flag(char *s, params_t *params)
 {
 	int i = 0;
 
