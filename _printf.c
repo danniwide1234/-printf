@@ -1,7 +1,8 @@
 #include "main.h"
+
 /**
  *_printf - printf simulator
- *@format: the format string
+ *@format: the format string to be worked on
  *
  *Return: number of bytes printed
  */
