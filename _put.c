@@ -1,10 +1,12 @@
 #include "main.h"
+
 /**
  *_puts - prints a string with newline
- *@str: the string to print
+ *@str: the string to print in question
  *
  *Return: void
  */
+
 int _puts(char *str)
 {
 	char *a = str;
