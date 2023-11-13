@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *prt_c - prints character
+ *prt_c - function to prints character
  *@ap: argument pointer
  *@params: the parameters struct
  *
