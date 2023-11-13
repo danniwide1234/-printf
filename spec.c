@@ -8,7 +8,7 @@
 int (*spec(char *s))(va_list ap, params_t *params)
 {
 	specifier_t specifiers[] = {
-		{"c", pnt_c},
+		{"c", prt_c},
 		{"d", prt_int},
 		{"i", prt_int},
 		{"s", prt_str},
