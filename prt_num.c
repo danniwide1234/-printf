@@ -1,21 +1,19 @@
 #include "main.h"
-
 /**
- * _isdigit - checks if character is digit
- * @c: the character to check
+ *_isdigit - checks if character is digit
+ *@c: the character to check
  *
- * Return: 1 if digit, 0 otherwise
+ *Return: 1 if digit, 0 otherwise
  */
 int _isdigit(int c)
 {
 	return (c >= '0' && c <= '9');
 }
-
 /**
- * _strlen - returns the length of a string
- * @s: the string whose length to check
+ *_strlen - returns the length of a string
+ *@s: the string whose length to check
  *
- * Return: integer length of string
+ *Return: integer length of string
  */
 int _strlen(char *s)
 {
@@ -25,15 +23,14 @@ int _strlen(char *s)
 		i++;
 	return (i);
 }
-
 /**
- * print_number - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ *prt_num - prints a number with options
+ *@str: the base number as a string
+ *@params: the parameter struct
  *
- * Return: chars printed
+ *Return: chars printed
  */
-int print_number(char *str, params_t *params)
+int prt_num(char *str, params_t *params)
 {
 	unsigned int i = _strlen(str);
 	int neg = (!params->unsign && *str == '-');
@@ -52,19 +49,18 @@ int print_number(char *str, params_t *params)
 		*--str = '-';
 
 	if (!params->minus_flag)
-		return (print_number_right_shift(str, params));
+		return (prt_numr(str, params));
 	else
-		return (print_number_left_shift(str, params));
+		return (prt_numl(str, params));
 }
-
 /**
- * print_number_right_shift - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ *prt_numr - prints a number with options
+ *@str: the base number as a string
+ *@params: the parameter struct
  *
- * Return: chars printed
+ *Return: chars printed
  */
-int print_number_right_shift(char *str, params_t *params)
+int prt_numr(char *str, params_t *params)
 {
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
 	char pad_char = ' ';
@@ -98,15 +94,14 @@ int print_number_right_shift(char *str, params_t *params)
 	n += _puts(str);
 	return (n);
 }
-
 /**
- * print_number_left_shift - prints a number with options
- * @str: the base number as a string
- * @params: the parameter struct
+ *prt_numl - prints a number with options
+ *@str: the base number as a string
+ *@params: the parameter struct
  *
- * Return: chars printed
+ *Return: chars printed
  */
-int print_number_left_shift(char *str, params_t *params)
+int prt_numl(char *str, params_t *params)
 {
 	unsigned int n = 0, neg, neg2, i = _strlen(str);
 	char pad_char = ' ';

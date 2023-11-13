@@ -1,13 +1,12 @@
 #include "main.h"
-
 /**
- * print_char - prints character
- * @ap: argument pointer
- * @params: the parameters struct
+ *prt_c - prints character
+ *@ap: argument pointer
+ *@params: the parameters struct
  *
- * Return: number chars printed
+ *Return: number chars printed
  */
-int print_char(va_list ap, params_t *params)
+int prt_c(va_list ap, params_t *params)
 {
 	char pad_char = ' ';
 	unsigned int pad = 1, sum = 0, ch = va_arg(ap, int);
@@ -20,15 +19,14 @@ int print_char(va_list ap, params_t *params)
 		sum += _putchar(ch);
 	return (sum);
 }
-
 /**
- * print_int - prints integer
- * @ap: argument pointer
- * @params: the parameters struct
+ *prt_int - prints integer
+ *@ap: argument pointer
+ *@params: the parameters struct
  *
- * Return: number chars printed
+ *Return: number chars printed
  */
-int print_int(va_list ap, params_t *params)
+int prt_int(va_list ap, params_t *params)
 {
 	long l;
 
@@ -38,17 +36,16 @@ int print_int(va_list ap, params_t *params)
 		l = (short int)va_arg(ap, int);
 	else
 		l = (int)va_arg(ap, int);
-	return (print_number(convert(l, 10, 0, params), params));
+	return (prt_num(cnvrt(l, 10, 0, params), params));
 }
-
 /**
- * print_string - prints string
- * @ap: argument pointer
- * @params: the parameters struct
+ *prt_str - prints string
+ *@ap: argument pointer
+ *@params: the parameters struct
  *
- * Return: number chars printed
+ *Return: number chars printed
  */
-int print_string(va_list ap, params_t *params)
+int prt_str(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *), pad_char = ' ';
 	unsigned int pad = 0, sum = 0, i = 0, j;
@@ -82,29 +79,27 @@ int print_string(va_list ap, params_t *params)
 	}
 	return (sum);
 }
-
 /**
- * print_percent - prints string
- * @ap: argument pointer
- * @params: the parameters struct
+ *prt_prcnt - prints string
+ *@ap: argument pointer
+ *@params: the parameters struct
  *
- * Return: number chars printed
+ *Return: number chars printed
  */
-int print_percent(va_list ap, params_t *params)
+int prt_prcnt(va_list ap, params_t *params)
 {
 	(void)ap;
 	(void)params;
 	return (_putchar('%'));
 }
-
 /**
- * print_S - custom format specifier
- * @ap: argument pointer
- * @params: the parameters struct
+ *prt_S - custom format specifier
+ *@ap: argument pointer
+ *@params: the parameters struct
  *
- * Return: number chars printed
+ *Return: number chars printed
  */
-int print_S(va_list ap, params_t *params)
+int prt_S(va_list ap, params_t *params)
 {
 	char *str = va_arg(ap, char *);
 	char *hex;
@@ -118,7 +113,7 @@ int print_S(va_list ap, params_t *params)
 		{
 			sum += _putchar('\\');
 			sum += _putchar('x');
-			hex = convert(*str, 16, 0, params);
+			hex = cnvrt(*str, 16, 0, params);
 			if (!hex[1])
 				sum += _putchar('0');
 			sum += _puts(hex);

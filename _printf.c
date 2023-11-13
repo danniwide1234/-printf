@@ -1,10 +1,9 @@
 #include "main.h"
-
 /**
- * _printf - prints anything
- * @format: the format string
+ *_printf - printf simulator
+ *@format: the format string
  *
- * Return: number of bytes printed
+ *Return: number of bytes printed
  */
 int _printf(const char *format, ...)
 {
@@ -21,7 +20,7 @@ int _printf(const char *format, ...)
 		return (-1);
 	for (p = (char *)format; *p; p++)
 	{
-		init_params(&params, ap);
+		prms(&params, ap);
 		if (*p != '%')
 		{
 			sum += _putchar(*p);
@@ -29,22 +28,21 @@ int _printf(const char *format, ...)
 		}
 		start = p;
 		p++;
-		while (get_flag(p, &params)) /* while char at p is flag char */
+		while (flag(p, &params))
 		{
-			p++; /* next char */
-		}
-		p = get_width(p, &params, ap);
-		p = get_precision(p, &params, ap);
-		if (get_modifier(p, &params))
 			p++;
-		if (!get_specifier(p))
-			sum += print_from_to(start, p,
+		}
+		p = width(p, &params, ap);
+		p = prec(p, &params, ap);
+		if (mod(p, &params))
+			p++;
+		if (!spec(p))
+			sum += prt_cstm(start, p,
 				params.l_modifier || params.h_modifier ? p - 1 : 0);
 		else
-			sum += get_print_func(p, ap, &params);
+			sum += prt_fnc(p, ap, &params);
 	}
 	_putchar(BUF_FLUSH);
 	va_end(ap);
 	return (sum);
 }
-
