@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *cnvrt - converter function
- *@num: number
+ *@num: number in question
  *@base: base
  *@flags: argument flags
  *@params: paramater struct
