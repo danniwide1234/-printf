@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  *prms - clears struct fields and reset buf
  *@params: the parameters struct
