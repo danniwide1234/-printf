@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *spec - finds the format func
- *@s: the format string
+ *@s: the format string in question
  *
  *Return: the number of bytes printed
  */
