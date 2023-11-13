@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  *prt_cstm - prints a range of char addresses
- *@start: starting address
- *@stop: stopping address
- *@except: except address
+ *@start: starting address in question
+ *@stop: stopping address in question
+ *@except: except address in question
  *
  *Return: number bytes printed
  */
